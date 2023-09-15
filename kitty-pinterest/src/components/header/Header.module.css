@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 16px;
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.kittensBtn, .lovelyBtn {
+    display: flex;
+    height: 100%;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kittensBtn {
+    margin-left: 64px;
+    width: 140px;
+}
+
+.lovelyBtn {
+    width: 160px;
+}
+
+.kittensBtn:hover, .lovelyBtn:hover {
+    background-color: #2980b9;
+}
+
+.kittensBtn a, .lovelyBtn a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .kittensBtn {
+        margin-left: 5px;
+    }
+}
