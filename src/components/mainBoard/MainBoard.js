@@ -17,6 +17,7 @@ const MainBoard = () => {
     const pageRef = useRef(1);
     const location = useLocation();
     const isLovelyPage = location.pathname === "/lovely";
+    console.log(location)
 
     const getImages = async () => {
         try {
