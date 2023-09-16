@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, {useEffect, useState, useRef} from "react";
 import s from "./MainBoard.module.css"
 import Pin from "./Pin";
-import { getKittyPhoto } from "../../api/kittensApi";
+import {getKittyPhoto} from "../../api/kittensApi";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useLocation } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import useLikedImages from "../lovelyKittens/useLikedImages";
 
 const MainBoard = () => {
@@ -30,7 +30,9 @@ const MainBoard = () => {
     };
 
     useEffect(() => {
-        getImages();
+        if (!isLovelyPage) {
+            getImages();
+        }
     }, [isLovelyPage]);
 
     useEffect(() => {
@@ -40,7 +42,7 @@ const MainBoard = () => {
             ) || [];
             setLikedImages(likedImagesFromStorage);
         }
-    }, [location.pathname]);
+    }, [location.pathname, isLovelyPage]);
 
     return (
         <div className={s.wrapper}>

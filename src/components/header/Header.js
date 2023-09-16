@@ -1,14 +1,15 @@
 import React from "react";
 import s from "./Header.module.css";
+import {Link} from "react-router-dom";
 
 function Header() {
     return (
         <div className={s.header}>
             <div className={s.kittensBtn}>
-                <a href="/">Все котики</a>
+                <Link to="/" reloadDocument>Все котики</Link>
             </div>
             <div className={s.lovelyBtn}>
-                <a href="/lovely">Любимые котики</a>
+                <Link to="/lovely" reloadDocument>Любимые котики</Link>
             </div>
         </div>
     );
